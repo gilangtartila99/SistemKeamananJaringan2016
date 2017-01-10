@@ -34,6 +34,44 @@ Fungsi dari HIDS dan NIDS terdiri dari :
 1. HIDS berfungsi untuk memonitoring meta data dari berkas yang ada di komputer(localhost)
 2. NIDS berfungsi untuk memonitoring jaringan internet
 
+Rangkuman Pertemuan 9 Sistem Keamanan Jaringan
+
+Latar Belakang
+
+1. Apa yang dimaksud IDS(Instrusion Detection System)
+2. Apa perbedaan IDS dan IPS?
+3. Bagaimana urutan kinerja IDS dan IPS?
+4. Apa fungsi dari HIDS(Host Instrusion Detection System) dan NIDS(Network Instrusion Detection System)?
+
+IDS(Instrusion Detection System) merupakan sebuah perangkat yang berisi beberapa rule/aturan untuk dibuat log-nya. Biasanya rule ini senantiasa diupdate seperti anti virus
+
+Perbedaan antara IDS dan IPS terletak pada fungsinya, IDS berfungsi untuk membuat log/alert sedangkan IPS berfungsi untuk memblock
+
+Urutan kinerja dari IDS dan IPS terdiri dari:
+
+1. IDS
+
+- --Datang traffic tak biasa
+- --IDS meneteksi traffic tersebut sam dengan rule yang didirikan
+- --IDS membuat log alert bahwa ini sesuai dengan salah satu rule
+
+1. IPS
+
+- --IPS memblock traffic tersebut
+
+Fungsi dari HIDS dan NIDS terdiri dari :
+
+1. HIDS berfungsi untuk memonitoring meta data dari berkas yang ada di komputer(localhost)
+2. NIDS berfungsi untuk memonitoring jaringan internet
+
+Penutup
+
+Kesimpulan
+Dari pernyataan diatas dapat disimpulkan bahwa IDS adalah suatu program yang di rancang untuk memonitoring komputer untuk menjaga keamanan sistem yang ada pada komputer tersebut
+
+Saran
+Saran untuk IDS sebaiknya implementasi IDS di pergunakan dengan baik untuk menjaga keamanan sistem komputer yang kita miliki
+
 * Nama : Gilang Romadhanu Tartila
 * NPM : 1144033
 * Kelas : 3C
